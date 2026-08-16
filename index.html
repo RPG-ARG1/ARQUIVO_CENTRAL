@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Acesso</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="terminal">
+
+        <h1>ARQUIVO CENTRAL</h1>
+
+        <div class="linha"></div>
+
+        <p class="status">● SISTEMA ONLINE</p>
+
+        <p>IDENTIFICAÇÃO NECESSÁRIA</p>
+
+        <input 
+            type="text" 
+            id="chave" 
+            placeholder="Digite a chave..."
+        >
+
+        <button onclick="verificarChave()">
+            ACESSAR
+        </button>
+
+        <p id="mensagem"></p>
+
+    </div>
+
+    <script>
+
+        function verificarChave() {
+
+            const chave = document.getElementById("chave").value;
+
+            if (chave === "GALPAO") {
+                window.location.href = "arquivogalpao.html";
+
+           } else {
+                document.getElementById("mensagem").innerText =
+                    "CHAVE INVÁLIDA.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
