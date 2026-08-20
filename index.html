@@ -44,16 +44,16 @@
             if (chave === "GALPAO") {
                 window.location.href = "arquivogalpao.html";
             }
-
-            if (chave === "SANTAMARIA") {
+ 
+            else if (chave === "SANTAMARIA") {
                 window.location.href = "arquivoST.html";
-            }
-            
-           } else {
-                document.getElementById("mensagem").innerText =
-                    "CHAVE INVÁLIDA.";
-            }
+            } 
+
+    else {
+        document.getElementById("mensagem").innerText =
+            "ERRO: CHAVE INVÁLIDA.";
         }
+    }      
     </script>
 
 </body>
