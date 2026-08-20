@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <title>Sistema de Acesso</title>
@@ -39,21 +38,29 @@
 
         function verificarChave() {
 
-            const chave = document.getElementById("chave").value;
+            const chave = document.getElementById("chave").value.trim().toUpperCase();
 
             if (chave === "GALPAO") {
+
                 window.location.href = "arquivogalpao.html";
-            }
- 
-            else if (chave === "SANTAMARIA") {
-                window.location.href = "arquivoST.html";
+
             } 
 
-    else {
-        document.getElementById("mensagem").innerText =
-            "ERRO: CHAVE INVÁLIDA.";
+            else if (chave === "SANTAMARIA") {
+
+                window.location.href = "arquivoST.html";
+
+            } 
+
+            else {
+
+                document.getElementById("mensagem").innerText =
+                    "ERRO: CHAVE INVÁLIDA.";
+
+            }
+
         }
-    }      
+
     </script>
 
 </body>
